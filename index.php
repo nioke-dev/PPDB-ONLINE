@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="mb-3">
+                    <h3 class="h1 mb-3">
                         PPDB ONLINE <br>
                         SMK NEGERI 1 GENDING
                     </h3>
@@ -69,10 +69,88 @@
 
                     <a href="" class="btn btn-primary btn-lg rounded-pill">DAFTAR JURUSAN</a>
                 </div>
+                <div class="col-md-6 d-none d-sm-block">
+                    <img src="Assets/img/ilustration/undraw_Real_time_sync_re_nky7-removebg-preview.png" alt="image-hero" class="img-fluid d-block mx-auto" style="max-height: 300px;">
+                </div>
             </div>
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="text-center">
+                <h3>KENAPA PILIH <br> SMKN 1 GENDING ?</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="fasilitas">
+                        <div class="description">
+                            <h5>Fasilitas Lengkap</h5>
+                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                        </div>
+                        <div class="icon-des">
+                            <img src="Assets/img/ilustration/undraw_handcrafts_growth.svg" alt="fasilitas" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fasilitas active">
+                        <div class="description icon-left">
+                            <h5>Fasilitas Lengkap</h5>
+                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                        </div>
+                        <div class="icon-des">
+                            <img src="Assets/img/ilustration/book2.png" alt="buku" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fasilitas">
+                        <div class="description">
+                            <h5>Fasilitas Lengkap</h5>
+                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                        </div>
+                        <div class="icon-des">
+                            <img src="Assets/img/ilustration/skyline.png" alt="building" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fasilitas">
+                        <div class="description icon-left">
+                            <h5>Fasilitas Lengkap</h5>
+                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                        </div>
+                        <div class="icon-des">
+                            <img src="Assets/img/ilustration/board.png" alt="board" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fasilitas">
+                        <div class="description">
+                            <h5>Fasilitas Lengkap</h5>
+                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                        </div>
+                        <div class="icon-des">
+                            <img src="Assets/img/ilustration/shield.png" alt="shield" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fasilitas">
+                        <div class="description icon-left">
+                            <h5>Fasilitas Lengkap</h5>
+                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                        </div>
+                        <div class="icon-des">
+                            <img src="Assets/img/ilustration/user.png" alt="user" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
