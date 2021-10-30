@@ -213,6 +213,171 @@
     </section>
 
 
+    <section class="alumni">
+        <div class="container">
+            <h3 class="text-center font-weight-bold mb-3">Apa Kata Alumni?</h3>
+            <p class="text-center mb-4">Beberapa alasan kalian harus bergabung dengan SMK Negeri 1 Gending
+                dan bersiap menggapai masa depan gemilang.</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="Assets/img/ilustration/user.png" alt="foto">
+
+                            <p class="text-center">
+                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                            </p>
+
+                            <p class="font-weight-bold text-center mb-0">
+                                EDI SISWANTO
+                            </p>
+                            <span class="text-muted">Web Developer, Traviora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="Assets/img/ilustration/user.png" alt="foto">
+
+                            <p class="text-center">
+                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                            </p>
+
+                            <p class="font-weight-bold text-center mb-0">
+                                ALFIAN JAUHARI
+                            </p>
+                            <span class="text-muted">Web Developer, Traviora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="Assets/img/ilustration/user.png" alt="foto">
+
+                            <p class="text-center">
+                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                            </p>
+
+                            <p class="font-weight-bold text-center mb-0">
+                                RISKI DWI SAPUTRA
+                            </p>
+                            <span class="text-muted">Web Developer, Traviora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="Assets/img/ilustration/user.png" alt="foto">
+
+                            <p class="text-center">
+                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                            </p>
+
+                            <p class="font-weight-bold text-center mb-0">
+                                RISKI DWI SAPUTRA
+                            </p>
+                            <span class="text-muted">Web Developer, Traviora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="Assets/img/ilustration/user.png" alt="foto">
+
+                            <p class="text-center">
+                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                            </p>
+
+                            <p class="font-weight-bold text-center mb-0">
+                                RISKI DWI SAPUTRA
+                            </p>
+                            <span class="text-muted">Web Developer, Traviora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="Assets/img/ilustration/user.png" alt="foto">
+
+                            <p class="text-center">
+                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                            </p>
+
+                            <p class="font-weight-bold text-center mb-0">
+                                RISKI DWI SAPUTRA
+                            </p>
+                            <span class="text-muted">Web Developer, Traviora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="Assets/img/logo/logo smkn1gending.png" alt="SMKN 1 GENDING" height="70px" class="mb-3">
+                    <h3>SMKN 1 GENDING</h3>
+
+                    <ul>
+                        <li>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                            </i>
+                            Sumber Kerang, Kec. Gending, Kab. Probolinggo
+                        </li>
+                        <li>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                            </i>
+                            +623354492684
+                        </li>
+                        <li>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                                </svg>
+                            </i>
+                            info@smkn1-gending.sch.id
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 offset-md-1">
+                    <h3>Kontak Panitia</h3>
+                    <p>
+                        Adam : 08112345689 <br>
+                        Rizal : 08112345689 <br>
+                        Fanny : 08112345689 <br>
+                        Roni : 08123456789
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Peta Lokasi</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8525729008925!2d113.29987341383705!3d-7.805427594375221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7ab2fd0cc5265%3A0xb1a7dc1b07d0c828!2sSMK%20Negeri%201%20Gending!5e0!3m2!1sid!2sid!4v1635606101731!5m2!1sid!2sid" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <div class="container">
+                <div class="text-muted">
+                    Copyright @2020 SMKN 1 GENDING
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
