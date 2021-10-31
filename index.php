@@ -31,16 +31,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link mr-3 tentang-kami" href="#">TENTANG KAMI<span class="sr-only">(current)</span></a>
+                            <a class="nav-link mr-3 tentang-kami" href="#tentang">TENTANG KAMI<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3 statistik" href="#">STATISTIK</a>
+                            <a class="nav-link mr-3 statistik" href="#statistik">STATISTIK</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3 jadwal" href="#">JADWAL</a>
+                            <a class="nav-link mr-3 jadwal" href="#jadwal">JADWAL</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3 jadwal tentang-alumni" href="#">TENTANG ALUMNI</a>
+                            <a class="nav-link mr-3 jadwal" href="#fasilitas">KEUNGGULAN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-3 jadwal tentang-alumni" href="#tentang-alumni">TENTANG ALUMNI</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mr-3 masuk" href="#">MASUK</a>
@@ -76,7 +79,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="fasilitas">
         <div class="container">
             <div class="text-center mb-5">
                 <h3>KENAPA PILIH <br> SMKN 1 GENDING ?</h3>
@@ -152,7 +155,7 @@
         </div>
     </section>
 
-    <section class="tentang">
+    <section id="tentang" class="tentang">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -192,7 +195,7 @@
         </div>
     </section>
 
-    <section class="bg-primary pt-5 pb-5">
+    <section id="statistik" class="bg-primary pt-5 pb-5 statistik">
         <div class="container">
             <p class="text-white text-center">STATISTIK PENDAFTAR GELOMBANG 2</p>
             <div class="row">
@@ -212,8 +215,40 @@
         </div>
     </section>
 
+    <section id="jadwal" class="jadwal">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-5">
+                JADWAL PENDAFTARAN
+            </h2>
 
-    <section class="alumni">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <a href="" class="btn btn-primary rounded-pill mb-4">JADWAL</a>
+                    <h4 class="font-weight-bold">GEL 1</h4><br>
+                    <p class="font-weight-bold">Pendaftaran</p>
+                    <p class="text-muted">14 Oct 2020 - 06 Des 2020</p>
+                    <p class="font-weight-bold">Tes Akademik Dan Non Akademik</p>
+                    <p class="text-muted">07 Des 2020 - 08 Des 2020</p>
+                    <p class="font-weight-bold">Pengumuman</p>
+                    <p class="text-muted">12 Des 2020</p>
+                    <p class="font-weight-bold">Daftar Ulang</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <a href="" class="btn btn-primary rounded-pill mb-4">JADWAL</a>
+                    <h4 class="font-weight-bold">GEL 2</h4><br>
+                    <p class="font-weight-bold">Pendaftaran</p>
+                    <p class="text-muted">07 Des 2020 - 21 Feb 2021</p>
+                    <p class="font-weight-bold">Tes Akademik Dan Non Akademik</p>
+                    <p class="text-muted">22 Feb 2021 - 23 Feb 2021</p>
+                    <p class="font-weight-bold">Pengumuman</p>
+                    <p class="text-muted">27 Feb 2021</p>
+                    <p class="font-weight-bold">Daftar Ulang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang-alumni" class="alumni">
         <div class="container">
             <h3 class="text-center font-weight-bold mb-3">Apa Kata Alumni?</h3>
             <p class="text-center mb-4">Beberapa alasan kalian harus bergabung dengan SMK Negeri 1 Gending
@@ -378,10 +413,16 @@
         </div>
     </footer>
 
+    <a href="#" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="silver" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+        </svg>
+    </a>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
@@ -390,6 +431,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     -->
+
+    <script src="Assets/js/main.js"></script>
 </body>
 
 </html>
