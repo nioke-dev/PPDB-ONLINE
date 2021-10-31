@@ -46,7 +46,7 @@
                             <a class="nav-link mr-3 jadwal tentang-alumni" href="#tentang-alumni">TENTANG ALUMNI</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-3 masuk" href="#">MASUK</a>
+                            <a class="nav-link mr-3 masuk" href="login.php">MASUK</a>
                         </li>
                         <li class="nav-item">
                             <a class="daftar btn btn-primary rounded-pill" href="#">DAFTAR</a>
