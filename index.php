@@ -49,7 +49,7 @@
                             <a class="nav-link mr-3 masuk" href="login.php">MASUK</a>
                         </li>
                         <li class="nav-item">
-                            <a class="daftar btn btn-primary rounded-pill" href="#">DAFTAR</a>
+                            <a class="daftar btn btn-primary rounded-pill" href="register.php">DAFTAR</a>
                         </li>
                     </ul>
                 </div>

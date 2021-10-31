@@ -1,3 +1,23 @@
+<?php
+require 'functions.php';
+if (isset($_POST['submit'])) {
+	if (register($_POST) > 0) {
+		echo "
+            <script>
+                alert('Akun Berhasil Dibuat, Silahkan Login');
+                document.location.href='login.php';
+            </script>
+            ";
+	} else {
+		echo "
+            <script>
+                alert('Maaf Data Akun Gagal Dibuat... Silahkan Cek Data Anda!!!');
+                document.location.href='register.php';
+            </script>
+            ";
+	}
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -34,23 +54,23 @@
 						<h4>Create an account</h4>
 					</div>
 					<!-- Form -->
-					<form class="px-3">
+					<form class="px-3" method="POST" action="">
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" name="" placeholder="Full Name" tabindex="10" required>
+							<input type="text" name="fullname" placeholder="Full Name" tabindex="10" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="email" name="" placeholder="Email Address" tabindex="10" required>
+							<input type="email" name="email" placeholder="Email Address" tabindex="10" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="password" name="" placeholder="Password" required>
+							<input type="password" name="password" placeholder="Password" required>
 						</div>
 						<!-- Register Button -->
 						<div class="mb-3">
-							<button type="submit" class="btn btn-block">Register</button>
+							<button type="submit" class="btn btn-block" name="submit">Register</button>
 						</div>
 						<!-- <div class="text-center mb-2"> -->
 						<!-- <div class="text-center mb-3" style="color: #777;">or login with</div> -->
