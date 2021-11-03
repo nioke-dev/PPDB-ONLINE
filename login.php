@@ -1,14 +1,33 @@
+<?php
+require 'functions.php';
+
+session_start();
+
+if (isset($_SESSION['login'])) {
+	# code...
+	header("Location: index.php");
+	exit;
+}
+
+if (isset($_POST['submit'])) {
+	$login = login($_POST);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Login 5</title>
+	<title>Login System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="style-login.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 	<!-- link fonts poppins all family -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +48,16 @@
 			<!-- FORM CONTAINER BEGIN -->
 			<div class="col-lg-6 col-md-6 infinity-form-container">
 				<div class="col-lg-9 col-md-12 col-sm-8 col-xs-12 infinity-form">
+
+					<?php
+					if (isset($login['error'])) : ?>
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							<?= $login['pesan']; ?>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					<?php endif; ?>
 					<div class="text-left mb-4">
 						<h6 class="" style="font-size: 20px;">Welcome To</h6>
 						<h4 class="font-weight-bold" style="color: #6358DC; font-weight: bold; font-size: 35px; font-family: Poppins;">SMK NEGERI 1 GENDING</h4>
@@ -41,15 +70,15 @@
 						<h4>Login into account</h4>
 					</div>
 					<!-- Form -->
-					<form class="px-3">
+					<form class="px-3" method="POST" action="">
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="email" name="" placeholder="Email Address" tabindex="10" required>
+							<input type="email" name="email" placeholder="Email Address" tabindex="10" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="password" name="" placeholder="Password" required>
+							<input type="password" name="password" placeholder="Password" required>
 						</div>
 						<div class="row mb-3">
 							<!--Remember Checkbox -->
@@ -63,7 +92,7 @@
 
 						<!-- Login Button -->
 						<div class="mb-3">
-							<button type="submit" class="btn btn-block">Login</button>
+							<button type="submit" class="btn btn-block" name="submit">Login</button>
 						</div>
 						<!-- Forget Password -->
 						<div class="text-left">
@@ -79,6 +108,10 @@
 			<!-- FORM CONTAINER END -->
 		</div>
 	</div>
+
+	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 
 </html>

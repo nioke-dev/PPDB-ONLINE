@@ -25,3 +25,23 @@ function register($data)
 
     return mysqli_affected_rows($koneksi);
 }
+function login($data)
+{
+    global $koneksi;
+    $email = htmlspecialchars($data['email']);
+    $password = htmlspecialchars($data['password']);
+
+    $query = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+
+
+    if (query($query)) {
+        $_SESSION['login'] = true;
+        header("location: user-page.php");
+        exit;
+    }
+
+    return [
+        'pesan' => 'Email atau Password Salah',
+        'error' => 'true'
+    ];
+}
