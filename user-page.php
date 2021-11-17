@@ -2,6 +2,10 @@
 require 'functions.php';
 session_start();
 
+if (isset($_GET['email'])) {
+    $tangkap_email = $_GET['email'];
+}
+
 if (!isset($_SESSION['login'])) {
     # code...
     header("Location: login.php");
@@ -22,11 +26,13 @@ if (!isset($_SESSION['login'])) {
 
 <body>
     <!-- Sidenav -->
-    <?php include 'Templates/sidenav.php' ?>
+    <?php $title = 'Dashboard';
+    include 'Templates/sidenav.php' ?>
     <!-- Main content -->
     <div class="main-content" id="panel">
         <!-- Topnav -->
-        <?php include 'Templates/header.php' ?>
+        <?php $title = 'Dashboard';
+        include 'Templates/header.php' ?>
         <!-- Header -->
         <!-- Header content -->
         <div class="header bg-primary pb-6">
@@ -36,10 +42,10 @@ if (!isset($_SESSION['login'])) {
                         <div class="col-lg-6 col-7">
 
                         </div>
-                        <div class="col-lg-6 col-5 text-right">
+                        <!-- <div class="col-lg-6 col-5 text-right">
                             <a href="#" class="btn btn-sm btn-neutral">New</a>
                             <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Card stats -->
 
@@ -63,17 +69,26 @@ if (!isset($_SESSION['login'])) {
                             </div>
                         </div>
                         <div class="content">
-                            <ul>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                                <li>1. Buka Halaman</li>
-                            </ul>
+                            <ol>
+                                <li>Buka Halaman Input Data Calon Siswa Pada Sidenav</li>
+                                <ul>
+                                    <li>Isi Data Diri Kamu Pada Formulir Yang Tertera</li>
+                                    <li>Jika Ingin Mengubah Data bisa kamu lakukan hal yang serupa</li>
+                                </ul>
+                                <li>Buka Halaman Input Data Nilai Siswa</li>
+                                <ul>
+                                    <li>Disana Kamu Harus Menginputkan Nilai UNBK kamu pada surat keterangan lulus dari sekolah</li>
+                                    <li>Dan jika kamu salah menginputkan kmu bisa ubah data nilai kamu</li>
+                                </ul>
+                                <li>Buka Halaman Input Data</li>
+                                <ul>
+                                    <li>Disana kamu harus menginputkan data diri orang tua kamu</li>
+                                </ul>
+                                <li>Buka Halaman Pengumuman</li>
+                                <ul>
+                                    <li>Pada Halaman Pengumuman kamu bisa lihat informasi yang diberikan oleh admin</li>
+                                </ul>
+                            </ol>
                         </div>
                     </div>
                 </div>

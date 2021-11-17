@@ -3,6 +3,8 @@ require 'functions.php';
 
 session_start();
 
+
+
 if (isset($_SESSION['login'])) {
 	# code...
 	header("Location: index.php");
@@ -71,6 +73,7 @@ if (isset($_POST['submit'])) {
 					</div>
 					<!-- Form -->
 					<form class="px-3" method="POST" action="">
+						<!-- hidden input id -->
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>

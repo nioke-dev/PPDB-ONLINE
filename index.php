@@ -1,3 +1,9 @@
+<?php
+require 'functions.php';
+$data_perempuan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa WHERE jenis_kelamin = 'perempuan'")[0];
+$data_laki = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa WHERE jenis_kelamin = 'laki-laki'")[0];
+$data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,8 +51,14 @@
                         <li class="nav-item">
                             <a class="nav-link mr-3 jadwal tentang-alumni" href="#tentang-alumni">TENTANG ALUMNI</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link mr-3 masuk" href="login.php">MASUK</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-3 masuk" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                MASUK
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="admin_page/login_admin.php">Masuk Sebagai Admin</a>
+                                <a class="dropdown-item" href="login.php">Masuk Sebagai Siswa</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="daftar btn btn-primary rounded-pill" href="register.php">DAFTAR</a>
@@ -70,7 +82,7 @@
                         Untuk calon Pendaftar tahun ajaran 2020/2021 bisa mendaftar melalui website ini atau langsung datang ke tempat pendaftaran.
                     </P>
 
-                    <a href="" class="btn btn-primary btn-lg rounded-pill">DAFTAR JURUSAN</a>
+                    <a href="daftar-jurusan.php" class="btn btn-primary btn-lg rounded-pill">DAFTAR JURUSAN</a>
                 </div>
                 <div class="col-md-6 d-none d-sm-block">
                     <img src="Assets/img/ilustration/undraw_Real_time_sync_re_nky7-removebg-preview.png" alt="image-hero" class="img-fluid d-block mx-auto" style="max-height: 300px;">
@@ -88,8 +100,8 @@
                 <div class="col-md-6">
                     <div class="fasilitas">
                         <div class="description">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                            <h5>Progress Siswa</h5>
+                            <p>sekolah yang membentuk para siswa siswi nya untuk siap kerja maupun siap kuliah, dan SMK juga membentuk banyak wirausahawan muda yang mandiri maka dari itu kita harus pilih SMK</p>
                         </div>
                         <div class="icon-des">
                             <img src="Assets/img/ilustration/undraw_handcrafts_growth.svg" alt="fasilitas" class="img-fluid d-block mx-auto">
@@ -97,7 +109,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="fasilitas active">
+                    <div class="fasilitas">
                         <div class="description icon-left">
                             <h5>Fasilitas Lengkap</h5>
                             <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
@@ -197,18 +209,18 @@
 
     <section id="statistik" class="bg-primary pt-5 pb-5 statistik">
         <div class="container">
-            <p class="text-white text-center">STATISTIK PENDAFTAR GELOMBANG 2</p>
+            <p class="text-white text-center">STATISTIK PENDAFTAR</p>
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <h3 class="text-white font-weight-bold h1">293</h3>
+                    <h3 class="text-white font-weight-bold h1"><?= $data_keseluruhan['COUNT(jenis_kelamin)']; ?></h3>
                     <p class="text-white">TOTAL PENDAFTAR</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <h3 class="text-white font-weight-bold h1">293</h3>
+                    <h3 class="text-white font-weight-bold h1"><?= $data_laki['COUNT(jenis_kelamin)']; ?></h3>
                     <p class="text-white">LAKI LAKI</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <h3 class="text-white font-weight-bold h1">293</h3>
+                    <h3 class="text-white font-weight-bold h1"><?= $data_perempuan['COUNT(jenis_kelamin)']; ?></h3>
                     <p class="text-white">PEREMPUAN</p>
                 </div>
             </div>

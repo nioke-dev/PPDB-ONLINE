@@ -12,51 +12,33 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="user-page.php">
+                        <a class="nav-link <?= ($title === "Dashboard") ? 'active' : '' ?>" href="user-page.php">
                             <i class="ni ni-tv-2 text-primary"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="data-calon-siswa.php">
-                            <i class="ni ni-planet text-orange"></i>
+                        <a class="nav-link <?= ($title === "data_calon_siswa") ? 'active' : '' ?>" href="data-calon-siswa.php">
+                            <i class="fas fa-user-graduate text-dark"></i>
                             <span class="nav-link-text">Input Data Calon Siswa</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="data-nilai-siswa.php">
-                            <i class="ni ni-pin-3 text-primary"></i>
+                        <a class="nav-link <?= ($title === "data_nilai_siswa") ? 'active' : '' ?>" href="data-nilai-siswa.php">
+                            <i class="far fa-address-card text-dark"></i>
                             <span class="nav-link-text">Input Data Nilai Siswa</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="data-wali-siswa.php">
-                            <i class="ni ni-single-02 text-yellow"></i>
-                            <span class="nav-link-text">Input Data Wali</span>
+                        <a class="nav-link <?= ($title === "data_wali") ? 'active' : '' ?>" href="data-wali-siswa.php">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/family--v1.png" width="24px" />
+                            <span class="nav-link-text ml-2">Input Data Wali</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/tables.html">
-                            <i class="ni ni-bullet-list-67 text-default"></i>
-                            <span class="nav-link-text">Featured Not Yet Available</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/login.html">
-                            <i class="ni ni-key-25 text-info"></i>
-                            <span class="nav-link-text">Featured Not Yet Available</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/register.html">
-                            <i class="ni ni-circle-08 text-pink"></i>
-                            <span class="nav-link-text">Featured Not Yet Available</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/upgrade.html">
-                            <i class="ni ni-send text-dark"></i>
-                            <span class="nav-link-text">Featured Not Yet Available</span>
+                        <a class="nav-link <?= ($title === "pengumuman") ? 'active' : '' ?>" href="pengumuman.php">
+                            <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-announcement-news-kiranshastry-solid-kiranshastry.png" / width="24px">
+                            <span class="nav-link-text ml-2">Pengumuman</span>
                         </a>
                     </li>
                 </ul>
@@ -68,45 +50,95 @@
                 </h6>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">
-                            <i class="ni ni-send text-dark"></i>
+                        <a class="nav-link" href="logout.php" data-toggle="modal" data-target="#logoutModal" type="button">
+                            <i class="fas fa-sign-out-alt text-dark"></i>
                             <span class="nav-link-text">Logout</span>
                         </a>
                     </li>
+                    <!-- Logout Modal-->
+                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-toggle="modal" data-target="#about" type="button">
+                            <img src="https://img.icons8.com/ios-glyphs/30/000000/about.png" / width="21px">
+                            <span class="nav-link-text ml-2">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-toggle="modal" data-target="#help" type="button">
+                            <i class="fas fa-exclamation-circle text-dark"></i>
+                            <span class="nav-link-text">Help</span>
+                        </a>
+                    </li>
                 </ul>
-                <!-- Navigation -->
-                <!-- <ul class="navbar-nav mb-md-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-                                <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Getting started</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
-                                <i class="ni ni-palette"></i>
-                                <span class="nav-link-text">Foundation</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
-                                <i class="ni ni-ui-04"></i>
-                                <span class="nav-link-text">Components</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                                <i class="ni ni-chart-pie-35"></i>
-                                <span class="nav-link-text">Plugins</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active active-pro" href="examples/upgrade.html">
-                                <i class="ni ni-send text-dark"></i>
-                                <span class="nav-link-text">Upgrade to PRO</span>
-                            </a>
-                        </li>
-                    </ul> -->
+            </div>
+        </div>
+    </div>
+    <!-- Modal about -->
+    <div class="modal fade" id="about" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Aplikasi ini Dibuat Oleh Tim Creative :
+                    <ol>
+                        <li>Muhammad Nurul Mustofa (Ketua Tim & Developer)</li>
+                        <li>Muhammad Roihan (Designing)</li>
+                        <li>Muhammad husain (Designing)</li>
+                        <li>Nurhafifah (Data Research)</li>
+                        <li>Yanti Junianti Dewi (Data Research)</li>
+                        <li>Okta Nur Hidayani Subhan (Data Research)</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Help -->
+    <div class="modal fade" id="help" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Di Aplikasi PPDB ONLINE ini kami sangat menjunjung tinggi komunikasi dua arah! Tujuan tim Costumer Support kami adalah membuat anda nyaman!! karena itulah, tim Support kami bekerja 24 jam agar anda tidak menemui kendala apapun saat menjalankan website!!</p>
+                    Hubungi Kami Di :
+                    <ul>
+                        <li>Whatsapp : 085161644408</li>
+                        <li>Email : nioke8090@gmail.com</li>
+                        <li>Instagram : @nioke.id</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
