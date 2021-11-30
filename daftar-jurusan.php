@@ -19,13 +19,14 @@
 </head>
 
 <body>
-
-    <header>
-        <!-- navbar -->
-    </header>
-
-
-
+    <div style="margin-top: 20px; margin-left: 20px; cursor: pointer;" class="out-from-daftar-jurusan">
+        <a href="index.php" style="text-decoration: none; color: black;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+            </svg>
+        </a>
+    </div>
     <section id="fasilitas">
         <div class="container">
             <div class="text-center mb-5">
@@ -60,48 +61,43 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <div class="fasilitas">
-                        <div class="description">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                    <a href="" style="text-decoration: none; color: black;" type="button" class="" data-toggle="modal" data-target="#exampleModal3">
+                        <div class="fasilitas">
+                            <div class="description">
+                                <h5>Teknik Instalasi Tenaga Listrik</h5>
+                                <p>Teknik Instalasi Tenaga Listrik adalah jurusan yang mempelajari tentang perencanaan dan pemasangan instalasi penerangan.</p>
+                            </div>
+                            <div class="icon-des">
+                                <img src="Assets/icon/icons8-electric-64.png" alt="building" class="img-fluid d-block mx-auto">
+                            </div>
                         </div>
-                        <div class="icon-des">
-                            <img src="Assets/img/ilustration/skyline.png" alt="building" class="img-fluid d-block mx-auto">
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6">
-                    <div class="fasilitas">
-                        <div class="description icon-left">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                    <a href="" style="text-decoration: none; color: black;" type="button" class="" data-toggle="modal" data-target="#exampleModal4">
+                        <div class="fasilitas">
+                            <div class="description icon-left">
+                                <h5>Teknik Mesin Industri</h5>
+                                <p>Teknik Mesin Industri atau Teknik Pemesinan adalah jurusan yang mempelajari tentang energi dan sumber energinya.</p>
+                            </div>
+                            <div class="icon-des">
+                                <img src="Assets/icon/icons8-cnc-machine-48.png" alt="board" class="img-fluid d-block mx-auto">
+                            </div>
                         </div>
-                        <div class="icon-des">
-                            <img src="Assets/img/ilustration/board.png" alt="board" class="img-fluid d-block mx-auto">
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6">
-                    <div class="fasilitas">
-                        <div class="description">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                    <a href="" style="text-decoration: none; color: black;" type="button" class="" data-toggle="modal" data-target="#exampleModal5">
+                        <div class="fasilitas">
+                            <div class="description">
+                                <h5>Tata Busana</h5>
+                                <p>Tata Busana adalah kompetensi keahlian program studi keahlian Tata Busana yang menekankan pada bidang pembuatan busana dalam pengelolaan dan penyelenggaraan usaha busana.</p>
+                            </div>
+                            <div class="icon-des">
+                                <img src="Assets/icon/icons8-sewing-machine-48.png" alt="shield" class="img-fluid d-block mx-auto">
+                            </div>
                         </div>
-                        <div class="icon-des">
-                            <img src="Assets/img/ilustration/shield.png" alt="shield" class="img-fluid d-block mx-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="fasilitas">
-                        <div class="description icon-left">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
-                        </div>
-                        <div class="icon-des">
-                            <img src="Assets/img/ilustration/user.png" alt="user" class="img-fluid d-block mx-auto">
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,7 +153,7 @@
     </div>
 
 
-    <!-- Modal RPL -->
+    <!-- Modal TKR -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
@@ -228,7 +224,178 @@
     </div>
 
 
+    <!-- Modal TITL -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Teknik Instalasi Tenaga Listrik</h5>
+                </div>
+                <div class="modal-body">
+                    Teknik Instalasi Tenaga Listrik adalah jurusan yang mempelajari tentang perencanaan dan pemasangan instalasi penerangan, tenaga pemasangan dan pengoperasian motor listrik dengan kendali elektromekanik, elektronik dan PLC (Programable Logic Controller). Merawat dan memperbaiki alat rumah tangga listrik dan teknik pendingin, serta menggulung ulang motor listrik.
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=""><b>TUJUAN</b></div>
+                            <hr>
+                            Tujuan Kompetensi Keahlian Teknik Instalasi Tenaga Listrik adalah membekali peserta didik dengan pengetahuan, keterampilan dan sikap agar kompeten dalam :
+                            <ul>
+                                <li>
+                                    Menyelenggarakan sistem pendidikan Teknik Instalasi Pemanfaatan Tenaga Listrik yang berkualitas dan beretos kerja tinggi
+                                </li>
+                                <li>
+                                    Mendidik tenaga kerja Teknik Instalasi Pemanfaatan Tenaga Listrik yang disiplin mempunyai loyalitas yang tinggi
+                                </li>
+                                <li>
+                                    Mendidik tenaga kerja Teknik Instalasi Pemanfaatan Tenaga Listrik yang mampu bersaing baik tingkat nasional, regional, maupun global
+                                </li>
+                                <li>
+                                    Menciptakan tenaga Tekinik Instalasi Pemanfaatan Tenaga Listrik yang mampu berwirausaha
+                                </li>
+                                <li>
+                                    Mendidik tenaga terampil di bidang Teknik Instalasi Pemanfaatan Tenaga Listrik yang mampu menciptakan lapangan kerja
+                                </li>
+                                <li>
+                                    Mengembangkan teaching industry Teknik Ketenagalistrikan yang profesional
+                                </li>
+                                <li>
+                                    Teaching industry Teknik Instalasi Pemanfaatan Tenaga Listrik sebagai tempat pelatihan untuk mencetak tenaga kerja yang mandiri
+                                </li>
+                                <li>
+                                    Menciptakan tenaga kerja yang terampil sesuai dengan paket keahlian Teknik Instalasi Pemanfaatan Tenaga Listrik yang dibutuhkan di Dunia Usaha / Dunia Industri
+                                </li>
+                                <li>
+                                    Menyalurkan tenaga kerja yang profesional sesuai dengan kebutuhan Dunia Usaha / Dunia Industri
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            Kompetensi Yang Dipelajari :
+                            <hr>
+                            <ul>
+                                <li>Software Developer.</li>
+                                <li>Web Developer.</li>
+                                <li>Game Development. dan Software Tester.</li>
+                                <li>Software Engineering.</li>
+                                <li>Software Analis dan Integrator.</li>
+                                <li>Konsultan IT dan programmer.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Teknik Mesin Industri -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Teknik Mesin Industri</h5>
+                </div>
+                <div class="modal-body">
+                    Teknik Mesin Industri atau Teknik Pemesinan adalah jurusan yang mempelajari tentang energi dan sumber energinya. Hal-hal yang dipelajari dalam teknik mesin banyak berurusan dengan penggerak-penggerak awal seperti turbin uap, motor bakar, mesin-mesin perkakas, pompa dan kompresor, pendingin dan pemanas dan alat-alat kimia tertentu.
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=""><b>TUJUAN</b></div>
+                            <hr>
+                            Tujuan Kompetensi Keahlian Teknik Pemesinan adalah membekali peserta didik dengan pengetahuan, keterampilan dan sikap agar kompeten dalam
+                            <ul>
+                                <li>
+                                    Melakukan pekerjaan sebagai Operator Mesin di bengkel mesin perkakas
+                                </li>
+                                <li>
+                                    Melakukan pekerjaan Programer Mesin CNC
+                                </li>
+                                <li>
+                                    Melakukan pekerjaan sebagai Operator mesin CNC
+                                </li>
+                                <li>
+                                    Melakukan pekerjaan sebagai Drafter pada perencanaan produk Pemesinan
+                                </li>
+                                <li>
+                                    Melakukan pekerjaan sebagai Welder pada pekerjaan las busur manual
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            Kompetensi Yang Dipelajari :
+                            <hr>
+                            <ul>
+                                <li>Gambar Tekhink.</li>
+                                <li>Smulasi Digital.</li>
+                                <li>Kelistrikan Mesin Dan Konversi Energi.</li>
+                                <li>Teknik Gambar Manufaktur.</li>
+                                <li>Teknik Pemesinan Bubut.</li>
+                                <li>Teknik Pemesinan Frais.</li>
+                                <li>Teknik Pemesinan Gerinda</li>
+                                <li>Teknik Pemesinan CNC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Tata Busana -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tata Busana</h5>
+                </div>
+                <div class="modal-body">
+                    Kompetensi Keahlian Tata Busana menyiapkan peserta didik untuk memiliki kemampuan pengetahuan dan keterampilan dalam pembuatan busana.
+                    Tata Busana adalah kompetensi keahlian program studi keahlian Tata Busana yang menekankan pada bidang pembuatan busana dalam pengelolaan dan penyelenggaraan usaha busana serta mampu berkompetisi dalam mengembangkan sikap profesional dalam bidang busana.
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <b>Visi :</b>
+                            <p>Menjadikan Program Keahlian Tata Busana sebagai program keahlian yang menghasilkan sumber daya manusia yang profesional dan berakhlakul karimah yang mampu berkompetensi di tingkat nasional dan internasional.</p>
+                            <b>Misi :</b>
+                            <ul>
+                                <li>
+                                    Mengintegrasikan pendidikan dan pelatihan kejuruan yang berwawasan mutu, keunggulan, profesional, berakhlaq mulia dan berorientasi masa depan.
+                                </li>
+                                <li>
+                                    Membekali peserta didik untuk berkarir, mandiri yang mampu beradaptasi di lingkungan kerja sesuai bidangnya dan mampu menghadapi perubahan yang terjadi di masyarakat.
+                                </li>
+                                <li>
+                                    Membekali peserta didik sikap profesional untuk mengembangkan diri dan mampu berkompetisi di tingkat nasional, regional dan internasional.
+                                </li>
+                                <li>
+                                    Meningkatkan akses untuk mendapatkan layanan pendidikan kejuruan bagi masyarakat melalui program perluasan dan pengembangan program keahlian.
+                                </li>
+                                <li>
+                                    Mengembangkan sistem pendidikan dan pelatihan kejuruan yang adaptif fleksibel dan berwawasan global.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

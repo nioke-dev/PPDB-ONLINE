@@ -111,8 +111,8 @@ $data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
                 <div class="col-md-6">
                     <div class="fasilitas">
                         <div class="description icon-left">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                            <h5>Fasilitas Perpustakaan</h5>
+                            <p>Sekolah SMKN 1 Gending dilengkapi dengan fasilitas gedung perputakaan yang cukup lengkap yang memudahkan siswa untuk membaca buku.</p>
                         </div>
                         <div class="icon-des">
                             <img src="Assets/img/ilustration/book2.png" alt="buku" class="img-fluid d-block mx-auto">
@@ -122,30 +122,30 @@ $data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
                 <div class="col-md-6">
                     <div class="fasilitas">
                         <div class="description">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                            <h5>Sistem Mengajar</h5>
+                            <p>Sekolah SMKN 1 GENDING adalah sekolah yang memiliki guru guru yang kompeten dibidangnya, sehingga sekolah ini mengedepankan praktikum dibanding teori.</p>
                         </div>
                         <div class="icon-des">
-                            <img src="Assets/img/ilustration/skyline.png" alt="building" class="img-fluid d-block mx-auto">
+                            <img src="Assets/img/ilustration/board.png" alt="building" class="img-fluid d-block mx-auto">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="fasilitas">
                         <div class="description icon-left">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                            <h5>Sarana dan Prasarana</h5>
+                            <p>Sekolah SMKN 1 GENDING bisa dibilang sekolah yang cukup pesat perkembangan sarana dan prasarananya sehingga gedung untuk kebutuhan siswa praktikum tersedia lengkap.</p>
                         </div>
                         <div class="icon-des">
-                            <img src="Assets/img/ilustration/board.png" alt="board" class="img-fluid d-block mx-auto">
+                            <img src="Assets/img/ilustration/skyline.png" alt="board" class="img-fluid d-block mx-auto">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="fasilitas">
                         <div class="description">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                            <h5>Sistem Keamanan</h5>
+                            <p>Sekolah SMKN 1 GENDING terdapat posko satpam yang terdiri dari 2 satpam dan juga sekolah ini sudah dilengkapi CCTV pada setiap sudut gedungnya yang menjadikan sekolah ini aman dari tindak kejahatan.</p>
                         </div>
                         <div class="icon-des">
                             <img src="Assets/img/ilustration/shield.png" alt="shield" class="img-fluid d-block mx-auto">
@@ -155,8 +155,8 @@ $data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
                 <div class="col-md-6">
                     <div class="fasilitas">
                         <div class="description icon-left">
-                            <h5>Fasilitas Lengkap</h5>
-                            <p>Fasilitas Pengunjung KBM yang lengkap dan berkualitas premium akan memudahkan kalian dalam belajar.</p>
+                            <h5>Lulusan SMKN 1 GENDING</h5>
+                            <p>Sekolah ini terbukti mencetak lulusan siswa yang dapat bekerja sesuai dengan jurusannya di dunia industri. dan banyak pula lulusan sekolah ini yang melanjutkan pendidikannya di jenjang perkuliahan.</p>
                         </div>
                         <div class="icon-des">
                             <img src="Assets/img/ilustration/user.png" alt="user" class="img-fluid d-block mx-auto">
@@ -176,28 +176,28 @@ $data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
                 <div class="col-md-6">
                     <h3 class="font-weight-bold mb-3 mt-5 ">TENTANG SMKN 1 GENDING</h3>
                     <p class="deskripsi">
-                        SMKN 1 GENDING Adalah Sekolah menengah kejuruan negeri yang berdiri sejak 2003. SMKN 1GENDING Adalah Sekolah menengah kejuruan negeri yang berdiri sejak 2003. SMKNDU Adalah Sekolah menengah kejuruan negeri yang berdiri sejak 2003. SMKNDU Adalah Sekolah menengah kejuruan negeri yang berdiri sejak 2003.
+                        SMKN 1 GENDING berdiri di tanah kecamatan Gending tepatnya di desa Sumberkerang yang dimana hanya terdapat sekolah kami yang mengedepankan praktikum dibandingkan dengan teori di desa ini.
                     </p>
 
                     <p class="font-weight-bold mt-4">Kontak Kami</p>
                     <ul class="social">
                         <li>
-                            <a href="tel:085161644408">
+                            <a href="tel:085161644408" target="_blank">
                                 <img src="Assets/img/icon/phone-symbol-of-an-auricular-inside-a-circle_icon-icons.com_56478.png" alt="telephone">
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:nioke8090@gmail.com">
+                            <a href="mailto:nioke8090@gmail.com" target="_blank">
                                 <img src="Assets/img/icon/mail_email_message_electronic_online_web_icon-icons.com_59986.png" alt="email">
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/groups/709516699779630">
+                            <a href="https://www.facebook.com/groups/709516699779630" target="_blank">
                                 <img src="Assets/img/icon/social_facebook_fb_35.png" alt="facebook">
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.smkn1gending.sch.id/">
+                            <a href="https://www.smkn1gending.sch.id/" target="_blank">
                                 <img src="Assets/img/icon/seo-social-web-network-internet_174_icon-icons.com_61537.png" alt="website">
                             </a>
                         </li>
@@ -270,10 +270,10 @@ $data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="Assets/img/ilustration/user.png" alt="foto">
+                            <img src="Assets/img/alumni/alumni1.jpg" alt="foto">
 
                             <p class="text-center">
-                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                                Tidak hanya akademis yang sempurna, di SMKN 1 Gending saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
                             </p>
 
                             <p class="font-weight-bold text-center mb-0">
@@ -286,80 +286,84 @@ $data_keseluruhan = query("SELECT COUNT(jenis_kelamin) FROM calon_siswa")[0];
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="Assets/img/ilustration/user.png" alt="foto">
+                            <img src="Assets/img/alumni/alumni6.jpg" alt="foto">
 
                             <p class="text-center">
-                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                                SMKN 1 GENDING saya bangga menjadi salah satu alumni SMKN 1 GENDING, smk mengajarkan banyak hal dari banyaknya suatu hal yang tidak saya ketahui. SMKN 1 GENDING kajen is the best forever.. Insyaa Allah...
+                                <br>
+                                <br>
                             </p>
 
                             <p class="font-weight-bold text-center mb-0">
                                 ALFIAN JAUHARI
                             </p>
-                            <span class="text-muted">Web Developer, Traviora</span>
+                            <span class="text-muted">Desainer, Solo</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="Assets/img/ilustration/user.png" alt="foto">
+                            <img src="Assets/img/alumni/alumni2.jpg" alt="foto">
 
                             <p class="text-center">
-                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                                Sekolah ini telah banyak memberikan pelajaran kepada saya, sekolah ini telah membentuk saya menjadi karakter yang jauh lebih baik daripada sebelumnya. Ini semua karena para guru yang selalu ada untuk membimbing saya.
                             </p>
 
                             <p class="font-weight-bold text-center mb-0">
                                 RISKI DWI SAPUTRA
                             </p>
-                            <span class="text-muted">Web Developer, Traviora</span>
+                            <span class="text-muted">Karyawan Negeri, Traviora</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="Assets/img/ilustration/user.png" alt="foto">
+                            <img src="Assets/img/alumni/alumni3.jpg" alt="foto">
 
                             <p class="text-center">
-                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                                sangat menyenangkan. Banyak hal tak terlupakan yang saya dapatkan selama bersekolah disini. Sekolah ini telah mengajarkan banyal hal dan banyak membantu saya untuk menjadi seorang pribadi yang lebih baik.
                             </p>
 
                             <p class="font-weight-bold text-center mb-0">
                                 RISKI DWI SAPUTRA
                             </p>
-                            <span class="text-muted">Web Developer, Traviora</span>
+                            <span class="text-muted">Guru, Traviora</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="Assets/img/ilustration/user.png" alt="foto">
+                            <img src="Assets/img/alumni/alumni4.jpg" alt="foto">
 
                             <p class="text-center">
-                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                                Jaman sekarang semakin banyak berubah usia kita, semakin bertambah pula norma-norma dalam kehidupan ini di akhiri dengani perpisahan ini, tingkatkan rasa persaudaraan agar kita mengenang kenangan di bangku sekolah.
                             </p>
 
                             <p class="font-weight-bold text-center mb-0">
-                                RISKI DWI SAPUTRA
+                                PUTRA PRATAMA
                             </p>
-                            <span class="text-muted">Web Developer, Traviora</span>
+                            <span class="text-muted">Electrical insinyur, Traviora</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="Assets/img/ilustration/user.png" alt="foto">
+                            <img src="Assets/img/alumni/alumni5.jpg" alt="foto">
 
                             <p class="text-center">
-                                Tidak hanya akademis yang sempurna, di SMK Telkom Malang saya ditempa untuk memiliki jiwa entrepreneur yang berkarakter kuat. Sehingga setelah lulus saya bisa survive dan mandiri dengan usaha yang saya bangun di sekolah.
+                                Sekolah ini adalah sekolah terbaik menurut saya, walupun tidak sebaik sekolah lain yang ada. Walaupun demikian, disinilah cerita saya belajar menuntut ilmu yang tentunya tidak akan pernah saya lupakan.
+                                <br>
+                                <br>
                             </p>
 
                             <p class="font-weight-bold text-center mb-0">
-                                RISKI DWI SAPUTRA
+                                EDO PRATAMA ANANDA
                             </p>
-                            <span class="text-muted">Web Developer, Traviora</span>
+                            <span class="text-muted">Mobile Developer, Traviora</span>
                         </div>
                     </div>
                 </div>
