@@ -265,8 +265,6 @@ if (isset($_POST['edit'])) {
                                             <div class="col-4 text-left">
                                                 <!-- <button type="submit" name="submit" class="btn btn-sm btn-primary mr-1">Kirim</button> -->
                                                 <button type="submit" name="edit" class="btn btn-sm btn-success mr-1">Kirim Data</button>
-                                                <button type="reset" name="reset" class="btn btn-sm btn-danger">Reset</button>
-                                                <button type="submit" name="cetak" class="btn btn-sm btn-info">Cetak</button>
                                             </div>
                                         </div>
                                     </div>

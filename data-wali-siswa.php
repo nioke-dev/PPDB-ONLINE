@@ -33,7 +33,7 @@ if (isset($_POST['edit'])) {
     if (edit_data_wali($_POST) > 0) {
         echo "
             <script>
-                alert('Data Berhasil Diubah');                
+                alert('Data Berhasil Dikirim');                
                 document.location.href = 'data-wali-siswa.php';              
             </script>
             ";
@@ -191,8 +191,7 @@ if (isset($_POST['edit'])) {
                                         </div> -->
                                         <div class="row">
                                             <div class="col-4 text-left">
-                                                <button type="submit" name="submit" class="btn btn-sm btn-primary">Kirim</button>
-                                                <button type="submit" name="edit" class="btn btn-sm btn-danger">Ubah Data</button>
+                                                <button type="submit" name="edit" class="btn btn-sm btn-primary">Kirim</button>
                                             </div>
                                         </div>
                                     </div>

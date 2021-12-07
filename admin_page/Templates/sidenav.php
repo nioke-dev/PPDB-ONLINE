@@ -49,7 +49,7 @@ $name_admin = $id_user_yang_login['fullname'];
 
     <li class="nav-item <?= ($title === "daftar_admin") ? 'active' : '' ?>">
         <a class="nav-link" href="daftar_admin.php">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-users-cog"></i>
             <span>Daftar Admin</span>
         </a>
     </li>
@@ -109,7 +109,7 @@ $name_admin = $id_user_yang_login['fullname'];
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="../logout.php" type="button" data-toggle="modal" data-target="#logoutModal">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-sign-out-alt"></i>
             <span>Logout</span>
         </a>
     </li>

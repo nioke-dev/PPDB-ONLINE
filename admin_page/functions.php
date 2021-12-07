@@ -508,7 +508,31 @@ function validasi_siswa($data)
     $no_pendaftaran = htmlspecialchars($data['no_pendaftaran']);
     $validasi_now = htmlspecialchars($data['validate_now']);
     $query = "UPDATE calon_siswa SET        
-        status='$validasi_now'               
+        status='$validasi_now'                     
+        WHERE no_pendaftaran = '$no_pendaftaran'
+    ";
+    mysqli_query($koneksi, $query);
+    return mysqli_affected_rows($koneksi);
+}
+
+function newjurusanset($data)
+{
+    global $koneksi;
+    $no_pendaftaran = htmlspecialchars($data['no_pendaftaran']);
+    $query = "UPDATE calon_siswa SET        
+        jurusan_terpilih='TIDAK DITERIMA'                     
+        WHERE no_pendaftaran = '$no_pendaftaran'
+    ";
+    mysqli_query($koneksi, $query);
+    return mysqli_affected_rows($koneksi);
+}
+
+function newjurusansetlolos($data)
+{
+    global $koneksi;
+    $no_pendaftaran = htmlspecialchars($data['no_pendaftaran']);
+    $query = "UPDATE calon_siswa SET        
+        jurusan_terpilih='Belum Di Tentukan'                     
         WHERE no_pendaftaran = '$no_pendaftaran'
     ";
     mysqli_query($koneksi, $query);

@@ -108,9 +108,15 @@ if (isset($_POST['edit'])) {
                                                     <div class="card-body">
                                                         <h5 class="card-title">Info Status</h5>
                                                         <p class="card-text">Hai <?= $cek['fullname']; ?>!!!</p>
-                                                        <p class="card-text">Status Pendaftaran Kamu Saat Ini <?= $nopendaftar['status']; ?> silahkan segera daftar ulang</p>
-                                                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#daftar_ulang" type="button">Daftar Ulang Sekarang</a>
-
+                                                        <p class="card-text">Status Pendaftaran Kamu Saat Ini <?= $nopendaftar['status']; ?>
+                                                            <?php if ($nopendaftar['status'] == "LOLOS") {
+                                                                echo "Silahkan Daftar Ulang Sekarang";
+                                                            }
+                                                            if ($nopendaftar['status'] == "Belum Di Validasi") {
+                                                                echo "Harap Tunggu Admin Mengecek Data Kamu";
+                                                            } ?>
+                                                        </p>
+                                                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#daftar_ulang" type="button">Daftar Ulang Now</a>
                                                         <!-- Modal Daftar Ulang -->
                                                         <div class="modal fade" id="daftar_ulang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog">
@@ -182,8 +188,10 @@ if (isset($_POST['edit'])) {
                                                     <div class="card-body">
                                                         <h5 class="card-title">Pengajuan Pencabutan</h5>
                                                         <p class="card-text">Hai <?= $cek['fullname']; ?>!!!</p>
-                                                        <p class="card-text">Untuk pengajuan pencabutan Silahkan Datang Ke SMKN 1 GENDING pada tanggal 20 juli 2022 jam 08.00 - 10.00</p>
-                                                        <a href="https://goo.gl/maps/ZJBRfCiFuNA8YdCc9" target="_blank" class="btn btn-primary">Maps SMKN 1 GENDING</a>
+                                                        <p class="card-text">Untuk pengajuan pencabutan Silahkan Datang Ke SMKN 1 GENDING pada tanggal 20 juli 2022 jam 08.00 - 10.00 dengan membawa formulir yang diberikan admin</p>
+                                                        <p style="color: red; font-style: italic; font-size: 14px;">*Cetak Formulir menggunakan kertas ukuran A4 80gsm</p>
+                                                        <a href="https://goo.gl/maps/ZJBRfCiFuNA8YdCc9" target="_blank" class="btn btn-primary btn-sm">Petunjuk Arah</a>
+                                                        <a href="formulir_pencabutan.php" target="_blank" class="btn btn-primary btn-sm">Cetak Formulir Pencabutan</a>
                                                     </div>
                                                 </div>
                                             </form>

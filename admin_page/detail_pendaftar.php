@@ -39,6 +39,12 @@ if (isset($_POST['validasi'])) {
     }
 }
 if (isset($_POST['validate'])) {
+    if ($_POST['validate_now'] == "TIDAK DITERIMA") {
+        newjurusanset($_POST);
+    }
+    if ($_POST['validate_now'] == "LOLOS") {
+        newjurusansetlolos($_POST);
+    }
     if (validasi_siswa($_POST) > 0) {
         echo "
             <script>
@@ -129,6 +135,9 @@ if (isset($_POST['tentukan_jurusan'])) {
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <a href="dashboard_admin.php">
+                                <i class="fas fa-sign-out-alt" style="text-decoration: none; float: right; cursor: pointer; font-size: 19px;" data-toggle="tooltip" title="Kembali"></i>
+                            </a>
                             <h6 class="m-0 font-weight-bold text-primary">Data Pendaftar</h6>
                         </div>
                         <div class="card-body">
@@ -137,258 +146,205 @@ if (isset($_POST['tentukan_jurusan'])) {
                                 <input type="hidden" name="no_pendaftaan" value="<?= $calon_siswa['no_pendaftaran']; ?>">
                                 <h6 class="heading-small text-muted mb-4">Student information</h6>
                                 <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-nama-calon-siswa">No. Pendaftaran</label>
-                                                <input type="text" id="input-nama-calon-siswa" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['no_pendaftaran']; ?>" name="" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <input type="hidden" name="no_pendaftaran" value="<?= $calon_siswa['no_pendaftaran']; ?>">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-nama-calon-siswa">Nama Calon Siswa</label>
-                                                <input type="text" id="input-nama-calon-siswa" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['nama_calon_siswa']; ?>" name="nama-calon-siswa" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-tempat-lahir">Tempat Lahir</label>
-                                                <input type="text" id="input-tempat-lahir" class="form-control" placeholder="Type Here" name="tempat-lahir" value="<?= $calon_siswa['tempat_lahir']; ?>" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-jenis-kelamin">Jenis Kelamin</label>
-                                                <select class="form-control" id="input-jenis-kelamin" name="jenis-kelamin" readonly>
-                                                    <option value="<?= $calon_siswa['jenis_kelamin']; ?>"><?= $calon_siswa['jenis_kelamin']; ?></option>
-                                                    <option value="laki-laki">laki-laki</option>
-                                                    <option value="perempuan">perempuan</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-tanggal-lahir">Tanggal Lahir</label>
-                                                <input type="date" id="input-tanggal-lahir" class="form-control" name="tanggal-lahir" value="<?= $calon_siswa['tgl_lahir']; ?>" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-agama">Agama</label>
-                                                <select class="form-control" id="input-agama" name="agama" readonly>
-                                                    <option value="<?= $calon_siswa['agama']; ?>"><?= $calon_siswa['agama']; ?></option>
-                                                    <option value="islam">Islam</option>
-                                                    <option value="kristen">Kristen</option>
-                                                    <option value="hindu">Hindu</option>
-                                                    <option value="budha">Budha</option>
-                                                    <option value="konghucu">Konghucu</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="input-anak-ke" class="form-control-label">Anak Ke</label>
-                                                <select class="form-control" id="input-anak-ke" name="anak-ke" readonly>
-                                                    <option value="<?= $calon_siswa['anak_ke']; ?>"><?= $calon_siswa['anak_ke']; ?></option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                    <option value="lebih dari 10">Lebih Dari 10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="input-anak-ke" class="form-control-label">Pilih Jurusan Pertama</label>
-                                                <select class="form-control" id="input-anak-ke" name="jurusan-satu" readonly>
-                                                    <option value="<?= $calon_siswa['jurusan_satu']; ?>"><?= $calon_siswa['jurusan_satu']; ?></option>
-                                                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-                                                    <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
-                                                    <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
-                                                    <option value="Teknik Mesin Industri">Teknik Mesin Industri</option>
-                                                    <option value="Tata Busana">Tata Busana</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="input-anak-ke" class="form-control-label">Pilih Jurusan Kedua</label>
-                                                <select class="form-control" id="input-anak-ke" name="jurusan-dua" readonly>
-                                                    <option value="<?= $calon_siswa['jurusan_dua']; ?>"><?= $calon_siswa['jurusan_dua']; ?></option>
-                                                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-                                                    <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
-                                                    <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
-                                                    <option value="Teknik Mesin Industri">Teknik Mesin Industri</option>
-                                                    <option value="Tata Busana">Tata Busana</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="pas-foto-4-kali-6">Pas Foto 4 x 6</label>
-                                                <br>
-                                                <img src="../img/<?= $calon_siswa['pas_foto']; ?>" alt="gambar" width="100px" height="150px">
-                                                <input type="file" id="pas-foto-4-kali-6" class="form-control" name="pas-foto" value="" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <table>
+                                        <img src="../img/<?= $calon_siswa['pas_foto']; ?>" style="float: right; width: 150px;" alt="">
+                                        <tr>
+                                            <td>Nomor Pendaftaran</td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td>:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td><?= $calon_siswa['no_pendaftaran']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Siswa</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['nama_calon_siswa']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tempat Lahir</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['tempat_lahir']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jenis Kelamin</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['jenis_kelamin']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tanggal Lahir</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['tgl_lahir']; ?>&nbsp;(yyyy-mm-dd)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agama</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['agama']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anak Ke</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['anak_ke']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pilihan Jurusan Pertama</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['jurusan_satu']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pilihan Jurusan Kedua</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['jurusan_dua']; ?></td>
+                                        </tr>
+                                    </table>
                                 </div>
                                 <hr class="my-4" />
                                 <!-- Address -->
                                 <h6 class="heading-small text-muted mb-4">Contact information</h6>
                                 <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-alamat-calon-siswa">Alamat Calon Siswa</label>
-                                                <input id="input-alamat-calon-siswa" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['alamat_calon_siswa']; ?>" type="text" name="alamat-calon-siswa" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-alamat-sekolah-asal">Alamat Sekolah Asal</label>
-                                                <input id="input-alamat-sekolah-asal" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['alamat_sekolah_asal']; ?>" type="text" name="alamat-sekolah-asal" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="no-telp">No Telp Calon Siswa</label>
-                                                <input type="text" id="no-telp" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['tlp_calon_siswa']; ?>" name="no-telp-calon-siswa" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-nama-sekolah-asal">Nama Sekolah Asal</label>
-                                                <input type="text" id="input-nama-sekolah-asal" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['nama_sekolah_asal']; ?>" name="nama-sekolah-asal" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="tahun-lulus">Tahun Lulus</label>
-                                                <input type="text" id="tahun-lulus" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['tahun_lulus']; ?>" name="tahun-lulus" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-city">Tahun Periode</label>
-                                                <input type="text" id="input-city" class="form-control" placeholder="Type Here" value="<?= $calon_siswa['tahun_periode']; ?>" name="tahun-periode" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <table>
+                                        <tr>
+                                            <td>Alamat Calon Siswa</td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td>:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td><?= $calon_siswa['alamat_calon_siswa']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alamat Sekolah Asal</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['alamat_sekolah_asal']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>No Telp Calon Siswa</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['tlp_calon_siswa']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Sekolah Asal</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['nama_sekolah_asal']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>tahun Lulu</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['tahun_lulus']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>tahun Periode</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $calon_siswa['tahun_periode']; ?></td>
+                                        </tr>
+
+                                    </table>
                                 </div>
                                 <hr class="my-4" />
                                 <h6 class="heading-small text-muted mb-4">Data Nilai Siswa</h6>
                                 <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="nilai_matematika">Nilai Matematika</label>
-                                                <input type="text" id="nilai_matematika" class="form-control" placeholder="Type Here" value="<?= $data_nilai['matematika']; ?>" name="nilai_mtk" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="nilai_bahasa_indonesia">Nilai Bahasa Indonesia</label>
-                                                <input type="text" id="nilai_bahasa_indonesia" class="form-control" placeholder="Type Here" value="<?= $data_nilai['bhs_indo']; ?>" name="nilai_bindo" readonly>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="nilai_ipa">Nilai Ilmu Pengetahuan Alam</label>
-                                                <input type="text" id="nilai_ipa" class="form-control" placeholder="Type Here" value="<?= $data_nilai['ipa']; ?>" name="nilai_ipa" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="nilai_bahasa_inggris">Nilai Bahasa Inggris</label>
-                                                <input type="text" id="nilai_bahasa_inggris" class="form-control" placeholder="Type Here" value="<?= $data_nilai['bhs_ing']; ?>" name="nilai_bing" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <table>
+                                        <tr>
+                                            <td>Nilai Matematika</td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td>:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td><?= $data_nilai['matematika']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nilai Bahasa Indonesia</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_nilai['bhs_indo']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nilai Ilmu Pengetahuan Alam</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_nilai['ipa']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nilai Bahasa Inggris</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_nilai['bhs_ing']; ?></td>
+                                        </tr>
+                                    </table>
                                 </div>
                                 <hr class="my-4" />
                                 <h6 class="heading-small text-muted mb-4">Data Wali Siswa</h6>
                                 <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="nama-ayah">Nama Ayah</label>
-                                                <input type="text" id="nama-ayah" class="form-control" placeholder="Type Here" value="<?= $data_wali['nama_ayah']; ?>" name="nama_ayah" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="nama-ibu">Nama Ibu</label>
-                                                <input type="text" id="nama-ibu" class="form-control" placeholder="Type Here" value="<?= $data_wali['nama_ibu']; ?>" name="nama_ibu" readonly>
+                                    <table>
+                                        <tr>
+                                            <td>Nama Ayah</td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td>:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td><?= $data_wali['nama_ayah']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Ibu</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_wali['nama_ibu']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alamat Orang Tua</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_wali['alamat_ortu']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>No. Telepon Orang Tua</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_wali['telp_ortu']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pekerjaan Ayah</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_wali['pekerjaan_ayah']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pekerjaan Ibu</td>
+                                            <td></td>
+                                            <td>:</td>
+                                            <td><?= $data_wali['pekerjaan_ibu']; ?></td>
+                                        </tr>
+                                    </table>
+                                    <hr class="my-4" />
+                                    <h6 class="heading-small text-muted mb-4">Data Status</h6>
+                                    <div class="pl-lg-4">
+                                        <table>
+                                            <tr>
+                                                <td>Status Diterima</td>
+                                                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                <td>:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                <td><?= $calon_siswa['status']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Status Jurusan</td>
+                                                <td></td>
+                                                <td>:</td>
+                                                <td><?= $calon_siswa['jurusan_terpilih']; ?></td>
+                                            </tr>
+                                        </table>
+                                        <div class="row">
+                                            <div class="col-md-6 text-left">
+                                                <br>
+                                                <a href="detail_cetak.php?no_pendaftaran=<?= $calon_siswa['no_pendaftaran']; ?>" class="btn btn-info btn-sm mr-1" target="_blank">Cetak Data</a>
+                                                <button type="button" name="validasii" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal_validate">validasi Now</button>
+                                                <button type="button" name="tentukan_jurusan" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modal_tentukan_jurusan">Tentukan Jurusan</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="alamat_ortu">Alamat Ortu</label>
-                                                <input type="text" id="alamat_ortu" class="form-control" placeholder="Type Here" value="<?= $data_wali['alamat_ortu']; ?>" name="alamat_ortu" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="telp-ortu">No Telp. Orang Tua</label>
-                                                <input type="text" id="telp-ortu" class="form-control" placeholder="Type Here" value="<?= $data_wali['telp_ortu']; ?>" name="telp_ortu" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="pekejaan-ayah">Pekerjaan Ayah</label>
-                                                <input type="text" id="pekejaan-ayah" class="form-control" placeholder="Type Here" name="pekerjaan_ayah" value="<?= $data_wali['pekerjaan_ayah']; ?>" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="pekerjaan-ibu">Pekerjaan Ibu</label>
-                                                <input type="text" id="pekerjaan-ibu" class="form-control" placeholder="Type Here" name="pekerjaan_ibu" value="<?= $data_wali['pekerjaan_ibu']; ?>" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 text-left">
-                                            <!-- <button type="submit" name="submit" class="btn btn-sm btn-primary mr-1">Kirim</button> -->
-                                            <!-- <button type="submit" name="edit" class="btn btn-sm btn-success mr-1">Ubah Data</button> -->
-                                            <a href="detail_cetak.php?no_pendaftaran=<?= $calon_siswa['no_pendaftaran']; ?>" class="btn btn-info btn-sm mr-1" target="_blank">Cetak Data</a>
-                                            <button type="button" name="validasii" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal_validate">validasi Now</button>
-                                            <button type="button" name="tentukan_jurusan" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modal_tentukan_jurusan">Tentukan Jurusan</button>
-                                            <a href="dashboard_admin.php" class="btn btn-primary btn-sm">Kembali</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -434,6 +390,7 @@ if (isset($_POST['tentukan_jurusan'])) {
                 <div class="modal-body">
                     <form action="detail_pendaftar.php?no_pendaftaran=<?= $no_pendaftaran; ?>" method="POST">
                         <div class="form-group">
+                            <p>Berdasarkan Data Data yang siswa inputkan apakah siswa tersebut layak untuk menempati tempat duduk di SMKN 1 GENDING beri penilaian sekarang juga!!!</p>
                             <input type="hidden" name="no_pendaftaran" value="<?= $no_pendaftaran; ?>">
                             <label for="beri_penilaian">Beri Penilaian</label>
                             <select class="form-control" id="beri_penilaian" name="validate_now">
@@ -462,11 +419,17 @@ if (isset($_POST['tentukan_jurusan'])) {
                     </button>
                 </div>
                 <div class="modal-body">
+                    <p>Tentukan jurusan siswa sesuai dengan kemampuan siswa pada nilai yang tertera.</p>
+                    <p style="color: red; font-style: italic;">Ingat!!! jika status siswa <b>TIDAK DITERIMA</b> maka jangan isi formulir ini karena sudah terisi otomatis oleh sistem</p>
                     <form action="detail_pendaftar.php?no_pendaftaran=<?= $no_pendaftaran; ?>" method="POST">
                         <div class="form-group">
                             <input type="hidden" name="no_pendaftaran" value="<?= $no_pendaftaran; ?>">
                             <label for="beri_penilaian">Tentukan Jurusan</label>
-                            <select class="form-control" id="beri_penilaian" name="jurusan_terpilih">
+                            <select class="form-control" id="beri_penilaian" name="jurusan_terpilih" <?php if ($calon_siswa['status'] == 'TIDAK DITERIMA') {
+                                                                                                            echo "disabled";
+                                                                                                        } else {
+                                                                                                            echo "";
+                                                                                                        } ?>>
                                 <option value="<?= $calon_siswa['jurusan_terpilih']; ?>"><?= $calon_siswa['jurusan_terpilih']; ?></option>
                                 <option value="<?= $calon_siswa['jurusan_satu']; ?>"><?= $calon_siswa['jurusan_satu']; ?></option>
                                 <option value="<?= $calon_siswa['jurusan_dua']; ?>"><?= $calon_siswa['jurusan_dua']; ?></option>
